@@ -1,0 +1,131 @@
+*{
+  /* border:2px green dashed; */
+  margin:0px;
+  padding:0px; 
+}
+header{
+  padding-top: 5%;
+  min-height: 50%;
+}
+body{
+    background-color:white;
+    font-family: 'sorce code', sans-serif;
+    min-width:100%;
+}
+
+/* what contains everything on the page */
+.container{
+  /* margin-right:3em; */
+  min-width:100%;
+  /* width:100%; */
+  height:100vh;
+  display:grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  grid-template-areas:
+        "nav"
+        "icon"        
+        "content"
+        "footer";
+}
+
+/* navigation bar styling */
+
+nav{
+  padding-left:4em;
+  padding-right: 4em;
+  position: relative;
+  width: 100%;
+  top:0;
+  left:0;
+  z-index:10;
+}
+
+nav ul {
+  margin:0;
+  padding:0;
+  display:flex;
+}
+nav li{
+  padding: 1em 0;
+  list-style-type: none;
+  padding: 25px;
+  font-size: 1.7em;
+}
+
+nav li a {
+  color:black;
+  font-weight: 600;
+  opacity: 0.6;
+  text-decoration: none;
+  transition: .3s;
+}
+
+nav li a:hover {
+  color:rgb(233, 70, 233);
+  opacity: 1;
+  text-decoration: none;
+}
+
+/* a:link {
+    text-decoration: none;
+  } */
+  
+a:visited {
+    text-decoration: none;
+  }
+
+/* content section */
+.content{
+  grid-area:content;
+  max-width:600px;
+  margin: 0 auto;
+  text-align: center;
+  }
+
+.content img{
+  width: 60%;
+  border-radius: 8%;
+  margin-bottom: 4em;
+}
+
+.content p{
+  text-align: left;
+  padding-top: 20%;
+  font-size:1em;
+  line-height: 1.5rem;
+}
+.paragraph2{
+  text-indent: 2em;
+}
+/* the span tag that wrap starts off my paragraph */
+
+
+
+
+/* grid system for desktop */
+@media (min-width:1040px){
+  .container{
+    width:100%;
+    height:100vh;
+    display:grid;
+    grid-template-columns: 300px 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+          "icon content"
+          "nav content"
+          "footer footer";
+  }
+    nav ul{
+      display: flex;
+      justify-content: none;
+      flex-direction: horizontal;
+    }
+    .icon svg {
+      width: 100%;
+      padding-left:20px;
+    }
+
+  
+
+}
