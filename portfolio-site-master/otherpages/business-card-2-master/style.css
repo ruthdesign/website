@@ -1,0 +1,59 @@
+
+
+.front-side,
+.back-side {
+  width: 192px;
+  height: 288px;
+  position: below;
+  margin: 20px auto;
+  background-color:black;
+}
+
+.front-side{
+  background-image: url('bizzcardfront.svg');
+  background-repeat: no-repeat;
+}
+
+.back-side{
+  background-image: url('bizzcardback.svg');
+  background-repeat: no-repeat;
+ }
+
+ nav{
+  padding-left:4em;
+  padding-right: 4em;
+  /* TODO: figure out no longer staying fixed */
+  position: fixed;
+  width: 100%;
+  top:0;
+  left:0;
+  z-index:10;
+}
+
+nav ul {
+  margin:0;
+  padding:0;
+  display:flex;
+}
+nav li{
+  padding: 1em 0;
+  list-style-type: none;
+  padding: 25px;
+  font-size: 1.7em;
+}
+
+nav li a {
+  color:black;
+  font-weight: 600;
+  opacity: 0.6;
+  text-decoration: none;
+  transition: .3s;
+}
+
+nav li a:hover {
+  color:rgb(233, 70, 233);
+  opacity: 1;
+  text-decoration: none;
+}
+
+
